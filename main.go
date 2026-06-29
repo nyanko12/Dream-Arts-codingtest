@@ -71,6 +71,7 @@ func main() {
 		end, _ := strconv.Atoi(strings.TrimSpace(parts[1]))           // 終点のIDを取得
 		dis, _ := strconv.ParseFloat(strings.TrimSpace(parts[2]), 64) // 距離を取得
 
+		// 始点IDの集合を作成
 		starts[str] = true
 
 		// 各IDの次に進むIDとそのときの距離を記録

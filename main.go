@@ -77,6 +77,11 @@ func main() {
 		edges[str] = append(edges[str], edge{end, dis})
 	}
 
+	// 入力エラーの対応
+	if err := sc.Err(); err != nil {
+		fmt.Fprintln(os.Stderr, "読み取りエラー：", err)
+	}
+
 	// dfsを呼び出して全パスのルートの距離をチェックする
 	for s := range starts {
 		dfs(s, 0)
